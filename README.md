@@ -18,11 +18,12 @@ Fully customizable, non-befuddling, no lock-in developer-friendly NodeJS or Gola
 
 ![Lester Pipline](https://github.com/adaptech/letseventsource/blob/master/images/lester-pipeline.png)
 
-https://workshop.adaptechsolutions.net/lestercon2018/
+[Lester Conference 2018](https://workshop.adaptechsolutions.net/lestercon2018/)
 
-https://insights.adaptechsolutions.net/legacy-evolution-whitepaper/#adaptech-github-letseventsource
+[Legacy Evolution Whitepaper](https://insights.adaptechsolutions.net/legacy-evolution-whitepaper/#adaptech-github-letseventsource)
 
 ## Frequently Asked Questions
+
 ### What is Event Storming?
 
 Event storming is a very nice collaborative way of understanding software requirements and relating them directly to what the business needs. It was invented by Alberto Brandolini.

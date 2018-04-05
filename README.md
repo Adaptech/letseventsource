@@ -1,6 +1,4 @@
-# Important Upcoming Events
-
-[Lester Conference 2018](https://workshop.adaptechsolutions.net/lestercon2018/)
+# Join us at [Lester Conference 2018](https://workshop.adaptechsolutions.net/lestercon2018/) April 12th and 13th in Vancouver for the open source launch!!
 
 # Let's Event Store
 

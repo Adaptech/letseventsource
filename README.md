@@ -1,4 +1,4 @@
-# LetsEventStore
+# Let's Event Store
 
 Lester takes a specification for an event sourced system and produces deployment-ready commands, events, documentation and infrastructure.
 

@@ -1,3 +1,7 @@
+# Important Upcoming Events
+
+[Lester Conference 2018](https://workshop.adaptechsolutions.net/lestercon2018/)
+
 # Let's Event Store
 
 Lester takes a specification for an event sourced system and produces deployment-ready commands, events, documentation and infrastructure.
@@ -19,8 +23,6 @@ Fully customizable, non-befuddling, no lock-in developer-friendly NodeJS or Gola
 ![Lester Pipline](https://github.com/adaptech/letseventsource/blob/master/images/lester-pipeline.png)
 
 [Lester Conference 2018](https://workshop.adaptechsolutions.net/lestercon2018/)
-
-[Legacy Evolution Whitepaper](https://insights.adaptechsolutions.net/legacy-evolution-whitepaper/#adaptech-github-letseventsource)
 
 ## Frequently Asked Questions
 
@@ -98,3 +100,7 @@ EML is your hedge against the framework trap (a.k.a. “straight jacket, impleme
 ### What does “Lester” stand for?
 
 “Lester” is an acronym for “Let’s Event Source Together”
+
+### What about legacy code?
+
+[Legacy Evolution Whitepaper](https://insights.adaptechsolutions.net/legacy-evolution-whitepaper/#adaptech-github-letseventsource)

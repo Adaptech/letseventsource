@@ -30,7 +30,8 @@ Event storming is a very nice collaborative way of understanding software requir
 
 ### What is Event Markdown (EMD)?
 
-EMD is a simple convention-based textual representation of an Event Storming. It attempts to retains the key characteristics which make sticky-on-a-wall, group-of-people event storming so successful, such as deliberate fuzziness.
+EMD is a simple convention-based textual representation of an Event Storming. It attempts to retains the key characteristics which make sticky-on-a-wall, group-of-people event storming so successful, such as deliberate fuzziness. You can try it out at https://webeventstorming.com/ . There is a 30 second intro at https://webeventstorming.com/howto .
+
 
 ### What is “Green” Event Markdown?
 

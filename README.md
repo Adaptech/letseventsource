@@ -20,7 +20,6 @@ Fully customizable, non-befuddling, no lock-in developer-friendly NodeJS or Gola
 
 ![Lester Pipline](images/LESTER-stack-diagram.png)
 
-[Lester Conference 2018](https://workshop.adaptechsolutions.net/lestercon2018/)
 
 ## Frequently Asked Questions
 

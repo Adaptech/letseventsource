@@ -1,14 +1,10 @@
 # Join us at [LesterCon 2018](https://workshop.adaptechsolutions.net/lestercon2018/) April 12th and 13th in Vancouver for the open source launch!!
 
-# Let's Event Store
-
-Lester takes a specification for an event sourced system and produces deployment-ready commands, events, documentation and infrastructure.
-
 ## Event Sourced Systems, Made Simple
 
-“Lester” = “Let’s Event Source Together”
+“LESTER” = “Let’s Event Source Together”
 
-Lester takes a specification for an event sourced system and produces deployment-ready commands, events, documentation and infrastructure. It is designed to make prototyping and starting implementation of an event based system very simple and very closely aligned with business objectives and requirements.
+LESTER takes a specification for an event sourced system and produces deployment-ready commands, events, documentation and infrastructure. It is designed to make prototyping and starting implementation of an event based system very simple and very closely aligned with business objectives and requirements.
 
 ### In:
 

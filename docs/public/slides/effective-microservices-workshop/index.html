@@ -1,0 +1,386 @@
+	<head><meta charset="utf-8"></head>
+
+	<link rel="stylesheet" href="/revealjs/css/reveal.css">
+	<link rel="stylesheet" href="/revealjs/css/theme/solarized.css" id="theme">
+	<link rel="stylesheet" href="/revealjs/lib/css/zenburn.css">
+
+	<div class="reveal">
+	<div class="slides">
+	<section data-markdown
+	         data-separator="^---"
+		 data-separator-vertical="^___"
+		 data-separator-notes="^Note:">
+	# Delivering Effective Microservices
+
+![Adaptech Logo](/images/adaptech-logo-big-1.png)
+---
+
+## Introduction To Event Sourcing &amp; CQRS
+
+- Manage microservice coupling &amp; cohesion
+- Integrate legacy with events
+- Simplify code
+- Less meetings, less planning, better results.
+
+---
+
+
+## Event Storming
+
+![Webventstorming Example](/images/webeventstorming-example.png)
+
+___
+
+# The Human Eventstorming
+___
+
+## Why?
+
+- Great for exploring large complex systems.
+- Takes only a couple of hours.
+- Less crossed wires.
+- Less meetings, less &#34;documentation&#34;.
+- Shared understanding, understood by all.
+- Fun!
+___
+
+## How to Event Storm
+
+![Adaptech Logo](/images/eventstorming-eventstormed.png)
+
+___
+
+#### https://webeventstorming.com
+
+&lt;iframe width=&#34;1120&#34; height=&#34;720&#34; src=&#34;https://www.youtube.com/embed/1Pb4a8lr74E&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+
+Note: &#34;EMD (Event Markup Language) is a simple text notation for event storming online. We also use it to generate APIs for the Adaptech Platform. Basically, any line with a -&gt; is a command. Anything with a * is a document. Everything else is an event.&#34;
+___
+
+# Workshop Examples
+
+https://sites.google.com/adaptechsolutions.ca/workshop
+___
+
+# Bike From Mike
+**Envelope 1**
+![bike](/images/bike.png)
+
+Note: 
+1. &#34;Take a look at these requirements and do an event storming.&#34;
+
+2. &#34;That&#39;s the &#39;happy path&#39;. Now ... spend two minutes on a second event stream which shows what happens when (deletion, etc.)&#34;
+
+___
+## Bike From Mike
+
+![BikeFromMike](/images/bikefrommike-eventstorming.png)
+
+```
+Business Signed Up // businessId, locationId, description
+Bike Added To Inventory // bikeId, description
+Bike Delivered // bikeId, businessId, locationId
+Bike Location &amp; Inventory Report*
+Bike Availability Map By Location*
+Renter Registered // renterId
+Payment Received
+Bike Rented // rentalId, renterId, locationId, bikeId
+Bike Rental Returned // rentalId
+```
+
+___
+## Recipe Reviews
+
+**Envelope 2**
+
+What’s tasty? This site is about ranking recipes - enter yours and watch the number of stars go up. Should your creation be “Culinary Star Of The Month” by gaining the most 5 star ratings you get a $500 gift certificate.
+
+Let’s make a site where aspiring and seasoned chefs can enter their recipies. We do need their email address to tell them if they won and they want to be able to edit and delete their creations. Site visitors are able to assign 1 to 5 stars and add comments.
+
+Note: &#34;Take two minutes: Read the requirements. Then take a look at the events in the envelope. Try to arrange them in the right order.&#34; Participants will run into difficulties putting the technical events in sequence and will start discussing implementation details. &#34;That was painful. Try something else: Remove the technical events and try now.&#34;
+
+___
+# No Tech Jargon
+
+* Ubiquitous Domain Language - practice it!
+* Events are &#34;timeless&#34;, surviving technology fads &amp; obsolescence.
+
+&gt; If we re-built it on a different stack - would this spec still apply?&#34;
+
+
+---
+# Bounded Contexts: Finding Service Boundaries
+
+___
+
+## Strategic Domain Driven Design
+
+&gt; &#34;A bounded context is the context within which a ubiquitous language applies.&#34;
+
+___
+
+# Wordcloud
+
+Envelope 3
+
+Note:
+&#34;Please open envelope 3. Take a look at the cards in it. find the ones which belong together and put them in groups on the table.&#34;
+___
+
+# Restaurant Workflow
+
+- Server
+- Kitchen
+- Expediter
+
+![Restaurant](/images/restaurant-example.png)
+
+___
+
+|               | Restaurant Kitchen Workflow                                                                                    |
+|----------------------------|----------------------------------------------------------------------------------------------|
+| Order Taken                |                                                                                              |
+| Order Placed               | (**Kitchen**: &#34;Order placed means that I have received an order which needs to be plated.&#34;) |
+| Order Started              |                                                                                              |
+| Order Plated               | (**Expediter**: &#34;Order plated means that I have received an order for allocation to tables.&#34;)    |
+| Plates Allocated To Tables | (**Server**: &#34;Plates allocated to tables means there is an order for delivery.&#34;)                 |
+| Order Delivered            |                                                                                              |
+| Order Paid                 |                                                                                              |
+
+
+___
+
+Continued... 
+
+|               | Restaurant Kitchen Workflow                                                                                    |
+|----------------------------|----------------------------------------------------------------------------------------------|
+| Plates Allocated To Tables | (**Server**: &#34;Plates allocated to tables means there is an order for delivery.&#34;)                 |
+| Order Delivered            |                                                                                              |
+| Order Paid                 |                                                                                              |
+
+___
+## Three (Ubiquitous) &#34;Languages&#34;
+
+#### Server
+
+![server](/images/restaurant-server-example.png)
+
+#### Kitchen
+
+![kitchen](/images/restaurant-kitchen-example.png)
+
+#### Expediter
+
+![server](/images/restaurant-expediter-example.png)
+
+___ 
+
+# Kanban Board
+
+- TODO
+- Doing
+- Done
+
+Note: 
+&#34;Using the Post-Its on the tables, event storm a simple Kanban board.&#34;
+After 5 minutes, show the [Kanban board example](https://sites.google.com/adaptechsolutions.ca/workshop/kanban-board)
+
+___
+
+# Context Mapping Restaurant Kanban
+
+How do these  map to the Kanban board TODO/Doing/Done?
+
+```
+# Kitchen
+Order Received
+Order Started
+Order Plated
+```
+
+Note:
+1. Discuss for 1 minute: How would the events for the kitchen be mapped to the events on the Kanban board? 
+1. Ask a table group to present what they found.
+1. Show other examples which could be mapped to a TODO list in this way, then give table groups two minutes to come up with their own examples.
+
+```
+Bug Found
+Bug Assigned
+Bug Fixed
+```
+
+```
+Cab Ride Requested
+Cab Ride Started
+Cab Ride Paid
+```
+
+___
+
+# Context: Expediting
+
+```
+Order Received
+Plates Allocated To Tables
+Order Delivered
+```
+___
+
+# Context: Server
+
+```
+# Server
+Order Taken
+Order Placed
+Order Received For Delivery
+Order Delivered
+Order Paid
+```
+
+___
+
+
+# Find The Bounded Contexts
+
+[sites.google.com/adaptechsolutions.ca/workshop/shopping-cart](https://sites.google.com/adaptechsolutions.ca/workshop/shopping-cart)
+
+![shopping-cart](/images/shopping-cart-example.png)
+
+Note:
+&#34;Copy the EMD into webeventstorming.com. Then group commands and events which belong together. Put a comment for the name of the bounded context. WRITE DOWN THE EVENTS FOR LATER. Note: Documents can belong to more than one context!&#34; (5 minutes)
+
+---
+# Event Sourced Project Management
+
+___
+
+# Project Planning
+
+## Rotate Event Storming 90 Degrees
+
+| TODO                   | Doing | Done |
+|------------------------|-------|------|
+| Inventory Item Created |       |      |
+| Searchable Inventory List* |   |      |
+| Inventory Item Stocked |       |      |
+| Inventory Item Sold   |       |      |
+
+Note:
+&#34;Leadership: Is this the right priority?&#34;
+&#34;UX Designers: What is the users experience when creating inventory items?&#34;
+&#34;Developers: What API &amp; business rules are needed so Item Stocked events can occur?
+&#34;DevOps: Given these events will happen X times per second, create suitable infrastructure.&#34;
+
+___
+
+# Status Reporting
+
+| TODO                | Doing                  | Done                   |
+|---------------------|------------------------|------------------------|
+|                     |                        | Inventory Item Created |
+| Searchable Inventory List* |   |      |
+|                     | Inventory Item Stocked |                        |
+| Inventory Item Sold |                        |                        |
+
+___
+
+# Definition Of Done
+
+| TODO | Doing | Done                   |
+|------|-------|------------------------|
+|      |       | Inventory Item Created |
+|      |       | Searchable Inventory List*  | 
+|      |       | Inventory Item Stocked |
+|      |       | Inventory Item Sold   |
+
+___
+
+# Team Coordination Heroes
+![heroine](/images/heroine-300px.png)
+
+Note: &#34;You too can be team coordination heroes!&#34;
+___
+## Delivering The Online Ordering Product
+
+#### COORDINATE THIS:
+
+1. (Legacy) Inventory Management System Team
+1. (Legacy) User Registration / Identity &amp; Access Team
+1. Product Catalog CMS Team
+1. Online Ordering / Shopping Experience Team
+1. Payment Processing Team
+1. Order Fulfillment System Team (... where  Order Placed events go ...)
+
+Note:
+Make every table a &#34;team&#34;. Have them spend one minute discussing which teams they need to coordinate with.
+Then have &#34;meetings&#34; with other teams: Hand them a Post-IT with the name of the event they will receive from you.
+
+---
+
+# Hands-On
+
+![manwithhammer](/images/man-with-hammer-300px.png)
+
+___
+
+# Koennen Vor Lachen
+
+## THIS IS VERY ALPHA
+
+1. Install NodeJS (... or Go)
+2. Install https://eventstore.org/
+3. Paste EMD into https://sites.google.com/adaptechsolutions.ca/workshop/esp-builder (Use one of the shopping cart bounded contexts.)
+4. Generate NodeJS or Golang code
+5. Ask us to come by and show you how to run it. 
+
+___ 
+
+## EMD conventions for the ESP Platform
+
+- First comment is the name of the bounded context: **# Inventory**
+- First word in event name is the event stream/aggregate: **Inventory Item** Created
+- Aggregate name &#43; &#34;Id&#34; event property is the aggregate ID: Inventory Item Stocked // **inventoryitemId**, quantity, dateReceived
+
+___
+
+# What Business Rules Does It Need?
+
+# Build A Read Model
+
+Note:
+&#34;As a team, decide on a business rule and a read model you&#39;d like to implement for your bounded context.&#34;
+
+
+	</section>
+	</div>
+	</div>
+	<script src="/revealjs/lib/js/head.min.js"></script>
+	<script src="/revealjs/js/reveal.js"></script>
+	<script>
+		Reveal.initialize({
+		      	embedded : true,
+
+		        
+		        "center": true ,
+		        
+		        "controls": true ,
+		        
+		        "history": true ,
+		        
+		        "progress": true ,
+		        
+		        "transition":"concave",
+		        
+		        
+		        
+		        dependencies: [
+		          { src: '\/revealjs\/lib\/js\/classList.js"', condition: function() { return !document.body.classList; } },
+		          { src: '\/revealjs\/plugin\/markdown\/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+		          { src: '\/revealjs\/plugin\/markdown\/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+		          { src: '\/revealjs\/plugin\/highlight\/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+		          { src: '\/revealjs\/plugin\/zoom-js\/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+		          { src: '\/revealjs\/plugin\/notes\/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+		          { src: '\/revealjs\/plugin\/math\/math.js', async: true}
+		        ]
+		      });
+	</script>

@@ -1,0 +1,38 @@
+baseURL = "/"
+languageCode = "en-us"
+DefaultContentLanguage = "en"
+
+title = "Let's Event Source!"
+theme = "docdock"
+
+[params]
+editURL = "https://gogs.adaptechsolutions.ca/Adaptech/microservices-workshop/src/master/content/"
+noHomeIcon = false # default is false
+noSearch = false # default is false
+showVisitedLinks = true # default is false
+# themeStyle = "theme" # overide base css
+themeVariant = "gray" # choose theme variant "green", "gold" , "gray", "blue" (default)
+ordersectionsby = "weight" # ordersectionsby = "title"
+
+[outputs]
+home = [ "HTML", "RSS", "JSON"]
+
+
+# [[menu.shortcuts]]
+# pre = "<h3>More</h3>"
+# name = "<i class='fa fa-github'></i> Github repo"
+# identifier = "ds"
+# url = "https://github.com/vjeantet/hugo-theme-docdock"
+# weight = 10
+
+# [[menu.shortcuts]]
+# pre = "<h3>Even More</h3>"
+# name = "<i class='fa fa-camera'></i> Showcases"
+# url = "/showcase"
+# weight = 11
+
+# [[menu.shortcuts]]
+# name = "<i class='fa fa-bookmark'></i> Hugo Documentation"
+# identifier = "hugodoc"
+# url = "https://gohugo.io/"
+# weight = 20

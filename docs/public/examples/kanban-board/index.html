@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="generator" content="Hugo 0.36.1" />
+    <meta name="description" content="Lean project planning, simplified.">
+
+
+    <title>Kanban Board :: Delivering Effective Microservices</title>
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+    <link href="/css/nucleus.css" rel="stylesheet">
+    <link href="/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/css/hybrid.css" rel="stylesheet">
+    <link href="/css/featherlight.min.css" rel="stylesheet">
+    <link href="/css/horsey.css" rel="stylesheet">
+    
+    <link href="/css/theme.css" rel="stylesheet">
+    
+    
+      <link href="/css/theme-gray.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <script src="/js/jquery-2.x.min.js"></script>
+    <style type="text/css">
+      :root #header + #content > #left > #rlblock_left {
+        display:none !important;
+      }
+    </style>
+
+    
+
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-79101-13', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  </head>
+  <body class="" data-url="/examples/kanban-board/">
+    <nav id="sidebar" class="showVisitedLinks"><div class="highlightable">
+  <div id="header-wrapper">
+    <div id="header"><img src="/images/adaptech-logo-big-1.png" style="width:100%"></img>
+ 
+	<p>Delivering Effective Microservices</p>
+
+
+
+    </div><div class="searchbox">
+    <label for="search-by"><i class="fa fa-search"></i></label>
+    <input data-search-input id="search-by" type="text" placeholder="Search...">
+    <span data-search-clear=""><i class="fa fa-close"></i></span>
+</div>
+<script type="text/javascript" src="/js/lunr.min.js"></script>
+<script type="text/javascript" src="/js/auto-complete.js"></script>
+<script type="text/javascript">
+    var baseurl = "\/";
+</script>
+<script type="text/javascript" src="/js/search.js"></script>
+
+  </div>
+
+
+    <ul class="topics">
+            <li data-nav-id="/" class="dd-item">
+            <a href="/"><i class="fa fa-fw fa-home"></i></a>
+            </li>
+    <li data-nav-id="/instructor-notes/" class="dd-item parent">
+      <a href="/instructor-notes/">
+        <span>Instructor Notes</span>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+        <ul>
+      <li data-nav-id="/instructor-notes/1_introduction-to-eventsourcing/" class="dd-item">
+        <a href="/instructor-notes/1_introduction-to-eventsourcing/">
+          <span>Introduction to CQRS, Event Sourcing &amp; Microservices</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/instructor-notes/2_event-storming/" class="dd-item">
+        <a href="/instructor-notes/2_event-storming/">
+          <span>Event Storming: Understanding business requirements</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/instructor-notes/3_strategic-ddd/" class="dd-item">
+        <a href="/instructor-notes/3_strategic-ddd/">
+          <span>Bounded Contexts: Establishing Service Boundaries</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/instructor-notes/4_project-managing-microservice-projects/" class="dd-item">
+        <a href="/instructor-notes/4_project-managing-microservice-projects/">
+          <span>Project managing microservice projects</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/instructor-notes/5_hands-on/" class="dd-item">
+        <a href="/instructor-notes/5_hands-on/">
+          <span>Hands-On</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/activities/" class="dd-item parent">
+      <a href="/activities/">
+        <span>Activities</span>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+        <ul>
+      <li data-nav-id="/activities/context-mapping-todo/" class="dd-item">
+        <a href="/activities/context-mapping-todo/">
+          <span>Context Mapping TODO</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/activities/taking-care-of-business/" class="dd-item">
+        <a href="/activities/taking-care-of-business/">
+          <span>Recipe Reviews - No tech jargon</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/activities/human-eventstorming/" class="dd-item">
+        <a href="/activities/human-eventstorming/">
+          <span>The Human Eventstorming</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/activities/the-path-less-happy/" class="dd-item">
+        <a href="/activities/the-path-less-happy/">
+          <span>The Path Less Happy</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/activities/wordcloud/" class="dd-item">
+        <a href="/activities/wordcloud/">
+          <span>Word Cloud</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/activities/event-sourced-project-mgmt/" class="dd-item">
+        <a href="/activities/event-sourced-project-mgmt/">
+          <span>Event Sourced Project Management</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/examples/" class="dd-item parent parent">
+      <a href="/examples/">
+        <span>Examples</span>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+        <ul>
+      <li data-nav-id="/examples/bike-from-mike/" class="dd-item">
+        <a href="/examples/bike-from-mike/">
+          <span>Bike From Mike</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/examples/kanban-board/" class="dd-item active">
+        <a href="/examples/kanban-board/">
+          <span>Kanban Board</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/examples/pizza-delivery/" class="dd-item">
+        <a href="/examples/pizza-delivery/">
+          <span>Pizza Delivery</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/examples/recipe-reviews/" class="dd-item">
+        <a href="/examples/recipe-reviews/">
+          <span>Recipe Review Site</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/examples/restaurant-kitchen/" class="dd-item">
+        <a href="/examples/restaurant-kitchen/">
+          <span>Restaurant</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/examples/shopping-cart/" class="dd-item">
+        <a href="/examples/shopping-cart/">
+          <span>Shopping Cart</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/examples/timesheets/" class="dd-item">
+        <a href="/examples/timesheets/">
+          <span>Timesheets &amp; Billing</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/slides/" class="dd-item">
+      <a href="/slides/">
+        <span>Slides</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+        <ul>
+      <li data-nav-id="/slides/effective-microservices-workshop/" class="dd-item">
+        <a href="/slides/effective-microservices-workshop/">
+          <span>Delivering Effective Microservices</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+
+
+    <section id="footer"><center>
+
+
+
+
+
+
+
+
+
+</center>
+
+
+    </section>
+  </div>
+</nav>
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+        
+          <div id="top-bar">
+            
+              
+              
+              
+            <div id="top-github-link">
+              <a class="github-link" href="https://gogs.adaptechsolutions.ca/Adaptech/microservices-workshop/src/master/content/examples/kanban-board.md" target="blank">
+                <i class="fa fa-code-fork"></i>
+                Edit page
+              </a>
+            </div>
+              
+            
+
+            <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                <span id="sidebar-toggle-span">
+                  <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                    <i class="fa fa-bars"></i>
+                  </a>
+                </span>
+                <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                <span class="links">
+                
+
+
+
+
+
+
+
+ <a href='/'>Adaptech Workshops</a> > <a href='/examples/'>Examples</a> > Kanban Board
+
+ 
+
+ 
+
+   
+                </span>
+            </div>
+            <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#phase-1">Phase 1:</a></li>
+<li><a href="#phase-2">Phase 2:</a></li>
+<li><a href="#phase-3">Phase 3:</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+          </div>
+        
+        
+        <div id="body-inner">
+          
+            <h1>Kanban Board</h1>
+          
+
+
+
+
+
+
+<p>This can be used for explaining project phases.</p>
+
+<h2 id="phase-1">Phase 1:</h2>
+
+<p>There are three columns:</p>
+
+<ul>
+<li>TODO</li>
+<li>Doing</li>
+<li>Done</li>
+</ul>
+
+<p>Tasks appear in &ldquo;TODO&rdquo;. When somebody starts working on the task it goes to &ldquo;Doing&rdquo;. When it&rsquo;s done &hellip; it&rsquo;s &ldquo;Done&rdquo;.</p>
+
+<h2 id="phase-2">Phase 2:</h2>
+
+<p>The march of progress is not inexorable.</p>
+
+<ul>
+<li>It&rsquo;s possible to move from &ldquo;Doing&rdquo; back to &ldquo;TODO&rdquo;.</li>
+<li>Things can become undone. (From &ldquo;Done&rdquo; to &ldquo;TODO&rdquo;.)</li>
+<li>It&rsquo;s possible to delete tasks anytime, at any stage of completion.</li>
+</ul>
+
+<h2 id="phase-3">Phase 3:</h2>
+
+<ul>
+<li>Custom columns! Instead of (or in addition to) TODO/Doing/Done, create your own.</li>
+<li>Prioritization! Re-arrange tasks so the most important ones are at the top.</li>
+</ul>
+
+
+<footer class=" footline" >
+	
+</footer>
+
+
+
+
+        
+
+      </div>
+    </div>
+
+    
+ 
+    
+
+    <div id="navigation">
+        <a class="nav nav-prev" href="/examples/bike-from-mike/" title="Bike From Mike"> <i class="fa fa-chevron-left"></i></a>
+        <a class="nav nav-next" href="/examples/pizza-delivery/" title="Pizza Delivery" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+    </div>
+
+    </section>
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>    
+
+    <script src="/js/clipboard.min.js"></script>
+<script src="/js/featherlight.min.js"></script>
+<script src="/js/html5shiv-printshiv.min.js"></script>
+<script src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="/js/modernizr.custom.71422.js"></script>
+<script src="/js/learn.js"></script>
+<script src="/js/hugo-learn.js"></script>
+
+
+<link href="/mermaid/mermaid.css" type="text/css" rel="stylesheet"/>
+<script src="/mermaid/mermaid.js"></script>
+<script>mermaid.initialize({startOnLoad:true});</script>
+    
+
+  </body>
+</html>
+

@@ -14,7 +14,7 @@ Event Markdown (EMD) is a machine- and remote collaboration friendly way of doin
 
 Fully customizable, non-befuddling, no lock-in developer-friendly NodeJS or Golang. Infrastructure: Event Store and read model databases. Currently supports Eventstore, Postgres, LevelDB, Cassandra. Devops: Docker containers on Kubernetes.
 
-![Lester Pipline](images/LESTER-stack-diagram.png)
+![Lester Pipline](LESTER-stack-diagram.png)
 
 
 ## Frequently Asked Questions

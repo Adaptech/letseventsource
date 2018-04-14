@@ -1,6 +1,6 @@
 # Let's Event Source - Documentation
 
-### TL;DR - Quickstart: https://github.com/Adaptech/les
+### TL;DR. Getting started: https://github.com/Adaptech/les
 
 Thank you for joining us at [LesterCon 2018](https://workshop.adaptechsolutions.net/lestercon2018/) April 12th and 13th in Vancouver for the open source launch.
 

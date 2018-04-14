@@ -1,8 +1,12 @@
-# Thank you for joining us at [LesterCon 2018](https://workshop.adaptechsolutions.net/lestercon2018/) April 12th and 13th in Vancouver for the open source launch.
+# Let's Event Source - Documentation
+
+## TL;DR - Quickstart: https://github.com/Adaptech/les
+
+### Thank you for joining us at [LesterCon 2018](https://workshop.adaptechsolutions.net/lestercon2018/) April 12th and 13th in Vancouver for the open source launch.
 
 ## Event Sourced Systems, Made Simple
 
-“LESTER” = “Let’s Event Source Together”
+The LESTER Stack - “Let’s Event Source Together”
 
 LESTER takes a specification for an event sourced system and produces deployment-ready commands, events, documentation and infrastructure. It is designed to make prototyping and starting implementation of an event based system very simple and very closely aligned with business objectives and requirements.
 

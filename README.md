@@ -12,7 +12,9 @@ LESTER takes a specification for an event sourced system and produces deployment
 
 ### In:
 
-Event Markdown (EMD) is a machine- and remote collaboration friendly way of doing event storming. It retains what makes the Post-It & paper-on-the-wall version successful: Easy to do. Brings business and technical people together. Fun. Deliberately fuzzy to discourage getting lost in detail not (yet) needed. Event Markup Language (EML) is a simple implementation agnostic YAML based declarative language for describing event sourced systems. Custom business rules and read models in NodeJS or Golang.
+* Event Markdown (EMD) is a machine- and remote collaboration friendly way of capturing the results of an [event storming](http://ziobrando.blogspot.ca/2013/11/introducing-event-storming.html). It attempts to distract as little as possible from what makes the stickies & paper-on-the-wall version so successful and to augment it: Easy to do. Brings business and technical people together. Fun. Deliberately fuzzy to discourage getting lost in detail not (yet) needed. 
+
+* Event Markup Language (EML) is a simple implementation-agnostic YAML DSL for describing event sourced systems, custom business rules and read models.
 
 ### Out:
 
@@ -36,7 +38,7 @@ EMD is a simple convention-based textual representation of an Event Storming. It
 
 ### What is “Green” Event Markdown?
 
-“Green” EMD is Event Markdown which contains sufficient information for specifying a complete Event Sourced System in Event Markup Language (EML).
+“Green” EMD is Event Markdown which contains sufficient information for automatically generating an Event Markup Language (EML) specification for an event sourced system.
 
 ### What is an event sourced system?
 

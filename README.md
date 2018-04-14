@@ -6,7 +6,7 @@
 
 ## Event Sourced Systems, Made Simple
 
-The LESTER Stack - “Let’s Event Source Together”
+**The LESTER Stack - “Let’s Event Source Together”**
 
 LESTER takes a specification for an event sourced system and produces deployment-ready commands, events, documentation and infrastructure. It is designed to make prototyping and starting implementation of an event based system very simple and very closely aligned with business objectives and requirements.
 

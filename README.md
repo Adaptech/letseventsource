@@ -1,21 +1,26 @@
-# Join us at [LesterCon 2018](https://workshop.adaptechsolutions.net/lestercon2018/) April 12th and 13th in Vancouver for the open source launch!!
+# Let's Event Source - Documentation
+
+### TL;DR. Getting started: https://github.com/Adaptech/les
+
+Thank you for joining us at [LesterCon 2018](https://workshop.adaptechsolutions.net/lestercon2018/) April 12th and 13th in Vancouver for the open source launch.
 
 ## Event Sourced Systems, Made Simple
 
-“LESTER” = “Let’s Event Source Together”
+**The LESTER Stack - “Let’s Event Source Together”**
+
+![Lester Pipline](LESTER-stack-diagram.png)
 
 LESTER takes a specification for an event sourced system and produces deployment-ready commands, events, documentation and infrastructure. It is designed to make prototyping and starting implementation of an event based system very simple and very closely aligned with business objectives and requirements.
 
 ### In:
 
-Event Markdown (EMD) is a machine- and remote collaboration friendly way of doing event storming. It retains what makes the Post-It & paper-on-the-wall version successful: Easy to do. Brings business and technical people together. Fun. Deliberately fuzzy to discourage getting lost in detail not (yet) needed. Event Markup Language (EML) is a simple implementation agnostic YAML based declarative language for describing event sourced systems. Custom business rules and read models in NodeJS or Golang.
+* Event Markdown (EMD) is a machine- and remote collaboration friendly way of capturing the results of an [event storming](http://ziobrando.blogspot.ca/2013/11/introducing-event-storming.html). It attempts to distract as little as possible from what makes the stickies & paper-on-the-wall version so successful and to augment it: Easy to do. Brings business and technical people together. Fun. Deliberately fuzzy to discourage getting lost in detail not (yet) needed. 
+
+* Event Markup Language (EML) is a simple implementation-agnostic YAML DSL for describing event sourced systems, custom business rules and read models.
 
 ### Out:
 
 Fully customizable, non-befuddling, no lock-in developer-friendly NodeJS or Golang. Infrastructure: Event Store and read model databases. Currently supports Eventstore, Postgres, LevelDB, Cassandra. Devops: Docker containers on Kubernetes.
-
-![Lester Pipline](LESTER-stack-diagram.png)
-
 
 ## Frequently Asked Questions
 
@@ -32,7 +37,7 @@ EMD is a simple convention-based textual representation of an Event Storming. It
 
 ### What is “Green” Event Markdown?
 
-“Green” EMD is Event Markdown which contains sufficient information for specifying a complete Event Sourced System in Event Markup Language (EML).
+“Green” EMD is Event Markdown which contains sufficient information for automatically generating an Event Markup Language (EML) specification for an event sourced system.
 
 ### What is an event sourced system?
 

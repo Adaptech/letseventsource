@@ -3,112 +3,12 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/examples/bike-from-mike/</loc>
-  </url>
-  
-  <url>
-    <loc>/instructor-notes/</loc>
-  </url>
-  
-  <url>
-    <loc>/instructor-notes/1_introduction-to-eventsourcing/</loc>
-  </url>
-  
-  <url>
-    <loc>/examples/kanban-board/</loc>
-  </url>
-  
-  <url>
-    <loc>/examples/pizza-delivery/</loc>
-  </url>
-  
-  <url>
-    <loc>/examples/recipe-reviews/</loc>
-  </url>
-  
-  <url>
-    <loc>/examples/restaurant-kitchen/</loc>
-  </url>
-  
-  <url>
-    <loc>/examples/shopping-cart/</loc>
-  </url>
-  
-  <url>
-    <loc>/examples/timesheets/</loc>
-  </url>
-  
-  <url>
-    <loc>/activities/</loc>
-  </url>
-  
-  <url>
-    <loc>/activities/context-mapping-todo/</loc>
-  </url>
-  
-  <url>
-    <loc>/instructor-notes/2_event-storming/</loc>
-  </url>
-  
-  <url>
-    <loc>/activities/taking-care-of-business/</loc>
-  </url>
-  
-  <url>
-    <loc>/activities/human-eventstorming/</loc>
-  </url>
-  
-  <url>
-    <loc>/activities/the-path-less-happy/</loc>
-  </url>
-  
-  <url>
-    <loc>/activities/wordcloud/</loc>
-  </url>
-  
-  <url>
-    <loc>/instructor-notes/3_strategic-ddd/</loc>
-  </url>
-  
-  <url>
-    <loc>/examples/</loc>
-  </url>
-  
-  <url>
-    <loc>/instructor-notes/4_project-managing-microservice-projects/</loc>
-  </url>
-  
-  <url>
-    <loc>/instructor-notes/5_hands-on/</loc>
-  </url>
-  
-  <url>
-    <loc>/activities/event-sourced-project-mgmt/</loc>
-  </url>
-  
-  <url>
-    <loc>/</loc>
-    <lastmod>2017-04-24T18:36:24+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/slides/effective-microservices-workshop/</loc>
-    <lastmod>2017-04-24T18:36:24+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/_header/</loc>
-    <lastmod>2017-04-24T18:36:24+02:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/slides/</loc>
-    <lastmod>2017-04-24T18:36:24+02:00</lastmod>
+    <loc>/</loc>
     <priority>0</priority>
   </url>
   

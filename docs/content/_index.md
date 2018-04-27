@@ -7,9 +7,20 @@ draft= false
 
 # Event Sourced Systems Made Simple
 
-**The LESTER Stack - “Let’s Event Source Together”**
-
 ![Lester Pipline](LESTER-stack-diagram.png)
+
+**Event sourcing and CQRS/ES based "microservices" are increasingly seen as a nice way to build cohesive, loosely coupled systems with good transactional integrity. There is a knack to building software that way, so although the resulting systems tend to be much simpler and easier to understand than traditional (e.g.) object oriented implementations, there is a bit of a learning curve.**
+
+LES attempts to address this in three ways:
+
+1. **Fast microservice prototyping:** Go directly from an [event storming](http://ziobrando.blogspot.ca/2013/11/introducing-event-storming.html) to a working event sourced API.
+
+2. **"Architect in a box":** ```les validate``` assesses whether a prototype will result in a "good" event sourced microservice - cohesive, loosely-coupled, transactionally consistent. Then ```les-node -b``` builds a deployment-ready NodeJS API with plenty of guide fences and best practices in place as developers go forward customizing it. If you have your own coding standards or don't like NodeJS, implement your own in a language of your choice.
+
+3. **"Citizen IT Developer".** One of the goals of the LES project is to enable "business coders", "power users" and entrepreneurs with little technical knowledge to build highly scalable event sourced microservices from scratch, basically "I've made this API for my startup - could you build me an app for that?"
+
+LES is currently in alpha. We have started using 1. and 2. in Real Life projects. But no.3 (Citizen IT Developer) especially is still quite experimental, with a good number of features missing.
+
 
 **LESTER takes an event storming and turns it directly into deployment-ready commands, events, documentation and infrastructure. It makes prototyping and implementation of an event based system simple and keeps it closely aligned with business objectives and requirements. Its goal is to remove many of the hurdles associated with adopting CQRS/ES.**
 

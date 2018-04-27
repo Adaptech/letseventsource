@@ -8,7 +8,6 @@ weight = 200
 
 # Prototyping Event Sourced Microservices with LES
 
-
 This tutorial shows how to use the ```les``` and ```les-node``` tools to build a NodeJS based event sourced microservice straight from an event storming. ```les``` and ```les-node``` are part of the LESTER stack ("Let's Event Source Together"). LESTER takes a specification for an event sourced system and produces deployment-ready commands, events, documentation and infrastructure. It is designed to make prototyping and starting implementation of an event based system simple and keep development efforts closely aligned with business objectives and requirements.
 
 ### 1. Do an Event Storming
@@ -106,7 +105,11 @@ curl -X POST "http://localhost:3001/api/v1/Todo/AddItem" -H "accept: */*" -H "Co
 
 Look at the backlog:
 
-```curl http://localhost:3001/api/v1/r/TODOList```
+```bash
+
+curl http://localhost:3001/api/v1/r/TODOList```
+
+```
 
 (... or go to the Swagger UI at http://localhost:3001/api-docs/#/Queries/get_r_TODOList.)
 
@@ -205,7 +208,11 @@ docker-compose restart api # The restart is a workaround for a race condition wh
 
 Try it:
 
-```curl -X POST "http://localhost:3001/api/v1/Todo/AddItem" -H "accept: */*" -H "Content-Type: application/json" -d "{\"description\":\"Serpentlake\",\"dueDate\":\"Tuesday 3 May 2018\",\"todoId\":\"241dfb5c5e3243ea802e62a4ef000a5a\",\"userId\":\"48b0ef227d204fdc971def3deeb9ef4e\"}"```
+```bash
+
+curl -X POST "http://localhost:3001/api/v1/Todo/AddItem" -H "accept: */*" -H "Content-Type: application/json" -d "{\"description\":\"Serpentlake\",\"dueDate\":\"Tuesday 3 May 2018\",\"todoId\":\"241dfb5c5e3243ea802e62a4ef000a5a\",\"userId\":\"48b0ef227d204fdc971def3deeb9ef4e\"}"
+
+```
 
 ... results in:
 
@@ -213,16 +220,27 @@ Try it:
 
 Therefore, register the user:
 
-```curl -X POST "http://localhost:3001/api/v1/User/RegisterUser" -H "accept: */*" -H "Content-Type: application/json" -d "{\"email\":\"natalieharris066@test.com\",\"userId\":\"48b0ef227d204fdc971def3deeb9ef4e\"}"```
+```bash 
+
+curl -X POST "http://localhost:3001/api/v1/User/RegisterUser" -H "accept: */*" -H "Content-Type: application/json" -d "{\"email\":\"natalieharris066@test.com\",\"userId\":\"48b0ef227d204fdc971def3deeb9ef4e\"}"
+
+```
 
 ... and try adding a TODO item for that userId again:
 
-```curl -X POST "http://localhost:3001/api/v1/Todo/AddItem" -H "accept: */*" -H "Content-Type: application/json" -d "{\"description\":\"Serpentlake\",\"dueDate\":\"Tuesday 3 May 2018\",\"todoId\":\"241dfb5c5e3243ea802e62a4ef000a5a\",\"userId\":\"48b0ef227d204fdc971def3deeb9ef4e\"}"```
+```bash
+curl -X POST "http://localhost:3001/api/v1/Todo/AddItem" -H "accept: */*" -H "Content-Type: application/json" -d "{\"description\":\"Serpentlake\",\"dueDate\":\"Tuesday 3 May 2018\",\"todoId\":\"241dfb5c5e3243ea802e62a4ef000a5a\",\"userId\":\"48b0ef227d204fdc971def3deeb9ef4e\"}"
+
+```
 
 
 The item can now be found in the TODO list read model:
 
-```curl -X GET "http://localhost:3001/api/v1/r/TODOList" -H "accept: */*"```
+```bash
+
+curl -X GET "http://localhost:3001/api/v1/r/TODOList" -H "accept: */*"
+
+```
 
 returns ...
 
@@ -234,12 +252,20 @@ returns ...
 
 ... because now a user with userId 48b0ef227d204fdc971def3deeb9ef4e exists:
 
-```curl -X GET "http://localhost:3001/api/v1/r/UserLookup" -H "accept: */*"```:
+```bash
+
+curl -X GET "http://localhost:3001/api/v1/r/UserLookup" -H "accept: */*"
+
+```
+
+returns ...
 
 ```json
 
 [{"userId":"48b0ef227d204fdc971def3deeb9ef4e","email":"natalieharris066@test.com"}]
 
 ```
+
+
 
 

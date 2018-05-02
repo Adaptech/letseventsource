@@ -8,4 +8,3 @@ weight = 300
 +++
 
 {{%children style="h2" description="true"%}}
-

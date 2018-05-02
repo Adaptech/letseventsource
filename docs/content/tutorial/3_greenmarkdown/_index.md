@@ -1,7 +1,7 @@
 +++
 title= "3. Turn the Event Markdown \"Green\""
 date= 2018-05-02T10:29:57-07:00
-description = "\"Green\" EMD is event markdown which follows some simple conventions and has enough information to use it to generate valid an event sourced microservice API from it."
+description = "\"Green\" EMD is event markdown which follows some simple conventions and has enough information to use it to generate a working event sourced CQRS API from it."
 draft= false
 +++
 

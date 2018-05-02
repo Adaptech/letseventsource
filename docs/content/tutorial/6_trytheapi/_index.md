@@ -5,8 +5,6 @@ description = "Explore the newly generated API using CURL and Swagger"
 draft= false
 +++
 
-### 5. Try the API
-
 **The Swagger/OpenAPI UI is at http://localhost:3001/api-docs.**
 
 Create a backlog of tasks:

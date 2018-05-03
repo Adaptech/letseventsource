@@ -5,9 +5,13 @@ description = "Explore the newly generated API using CURL and Swagger"
 draft= false
 +++
 
-**The Swagger/OpenAPI UI is at http://localhost:3001/api-docs.**
+{{% alert theme="info" %}}**The NodeJS system built by ```les-node``` includes a Swagger API playground.**{{% /alert %}}
 
-Create a backlog of tasks:
+**The Swagger UI is at http://localhost:3001/api-docs.**
+
+**Let's use the API:**
+
+1. Create a backlog of tasks:
 
 ```bash
 
@@ -17,7 +21,7 @@ curl -X POST "http://localhost:3001/api/v1/Todo/AddItem" -H "accept: */*" -H "Co
 
 ```
 
-Look at the backlog:
+2. Look at the backlog:
 
 ```bash
 
@@ -25,7 +29,7 @@ curl http://localhost:3001/api/v1/r/TODOList```
 
 ```
 
-Pull some items from the backlog into TODO:
+3. Pull some items from the backlog into TODO:
 
 ```bash
 
@@ -35,7 +39,7 @@ curl -X POST "http://localhost:3001/api/v1/Todo/SetStatus" -H "accept: */*" -H "
 
 ```
 
-Do start some work and complete some work:
+4. Start some work and complete some work:
 
 ```bash
 
@@ -52,4 +56,6 @@ Here's the result:
 Try adding and completing some more items at http://localhost:3001/api-docs.
 
 **To look some of the events which were stored to the event log and published when commands were POSTed, go to http://localhost:2113 (username 'admin', password 'changeit')**
+
+
 

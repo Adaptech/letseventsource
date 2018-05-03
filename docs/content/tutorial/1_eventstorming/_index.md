@@ -5,7 +5,7 @@ description = "Event storming is a communications tool. It shows a path through 
 draft= false
 +++
 
-**Event storming is a communications tool. It shows a path through a system, as events on a timeline.**
+{{% alert theme="info" %}}**Event storming is a communications tool. It shows a path through a system, as events on a timeline.**{{% /alert %}}
 
 Compared to writing specifications using traditional use case analysis, event storming is ...
 

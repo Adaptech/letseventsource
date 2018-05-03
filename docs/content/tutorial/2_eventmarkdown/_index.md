@@ -5,7 +5,7 @@ description = "Event Markdown (EMD) is a simple language used to capture the res
 draft= false
 +++
 
-**Event Markdown (EMD) is a simple language used to capture the results of an event storming.**
+{{% alert theme="info" %}}**Event Markdown (EMD) is a simple language used to capture the results of an event storming.**{{% /alert %}}
 
 
 ![Eventstorming-graph.1.png](/tutorial/Eventstorming-graph.1.png)
@@ -22,13 +22,41 @@ TODO List* // description, dueDate
 
 ```
 
-* ```# This is a commment.```.
+{{% panel theme="success" header="**Comments**" %}}
+```# This is a comment.```
+{{% /panel %}}
 
-* This is a command: ```Command ->```. Commands can have parameters: ```Add Item -> // description, dueDate```
+{{% panel theme="success" header="**Commands**" %}}
+* This is a command:
 
-* And this is what events look like: ```Something Happened```. Or, with properties: ```Todo Added // description, dueDate```
+**Do Something ->**
 
-* Finally, a document (also known as a read model): ```TODO List*``` or ```TODO List* // todoId, description, dueDate, status```
+* Commands can have parameters:
+
+**Add Item -> // description, dueDate**
+{{% /panel %}}
+
+{{% panel theme="success" header="**Events**" %}}
+
+* And this is what events look like:
+
+**Something Happened**
+
+* With properties: 
+
+**Todo Added // description, dueDate**
+{{% /panel %}}
+
+{{% panel theme="success" header="**Documents**" %}}
+
+* Documents (also known as a read models):
+
+**TODO List***
+
+* Or, with properties:
+
+**TODO List* // todoId, description, dueDate, status**
+{{% /panel %}}
 
 **Enter EMD at https://webeventstorming.com to see it as a graph:**
 

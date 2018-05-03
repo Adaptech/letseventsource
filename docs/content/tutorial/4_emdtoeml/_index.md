@@ -5,7 +5,7 @@ description = "Event Markup Language (EML) is a YAML schema which describes the 
 draft= false
 +++
 
-**Event Markup Language describes the structure of a CQRS/ES system.**
+{{% alert theme="info" %}}**Event Markup Language describes the structure of a CQRS/ES system.**{{% /alert %}}
 
 Run the following command:
 
@@ -26,5 +26,6 @@ les convert
 
 EML is implementation language agnostic. It doesn't matter what stack the CQRS/ES system will be written in. At the moment there is a builder for EML -> NodeJS (```les-node```). There's also EML -> Swagger spec to give developers a nice UI to play with the system's API. A EML -> Golang implementation is in early alpha.
 
-__Modeling a CQRS/ES system from scratch guided by feedback from the ```les validate``` tool will be covered in a separate tutorial.__
-
+{{% notice tip %}}
+Try  "```les --help```"
+{{% /notice %}}

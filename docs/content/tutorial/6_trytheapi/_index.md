@@ -11,7 +11,7 @@ draft= false
 
 **Let's use the API:**
 
-1. Create a backlog of tasks:
+* Create a backlog of tasks:
 
 ```bash
 
@@ -21,7 +21,7 @@ curl -X POST "http://localhost:3001/api/v1/Todo/AddItem" -H "accept: */*" -H "Co
 
 ```
 
-2. Look at the backlog:
+* Look at the backlog:
 
 ```bash
 
@@ -29,7 +29,7 @@ curl http://localhost:3001/api/v1/r/TODOList```
 
 ```
 
-3. Pull some items from the backlog into TODO:
+* Pull some items from the backlog into TODO:
 
 ```bash
 
@@ -39,7 +39,7 @@ curl -X POST "http://localhost:3001/api/v1/Todo/SetStatus" -H "accept: */*" -H "
 
 ```
 
-4. Start some work and complete some work:
+* Start some work and complete some work:
 
 ```bash
 

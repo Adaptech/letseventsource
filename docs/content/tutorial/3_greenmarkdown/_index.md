@@ -5,7 +5,7 @@ description = "\"Green\" EMD is event markdown which follows some simple convent
 draft= false
 +++
 
-**"Green" EMD is event markdown which follows some simple conventions and has enough information to use it to generate an event sourced microservice API from it.**
+{{% alert theme="info" %}}**"Green" EMD is event markdown which follows some simple conventions and has enough information to use it to generate an event sourced microservice API from it.**{{% /alert %}}
 
 To validate an EMD file for greenness, see ```les validate --help```.
 

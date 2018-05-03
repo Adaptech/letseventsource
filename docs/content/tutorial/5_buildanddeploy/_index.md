@@ -5,6 +5,8 @@ description = "Build a CQRS/ES system in NodeJS and deploy it with docker-compos
 draft= false
 +++
 
+{{% alert theme="info" %}}**The ```les-node``` command line tool generates a complete NodeJS CQRS/ES system from Event Markup Language (EML).**{{% /alert %}}
+
 Run the following: 
 
 ```bash
@@ -20,3 +22,7 @@ les-node -b Eventsourcing.eml.yaml \
 **This implements the TODO list API in NodeJS, with in-memory read models and https://eventstore.org as event log.**
 
  It is possible to configure the system to use Postgres or LevelDB for read model storage, but the generated ```docker-compose.yml``` contains a dev enviroment setup where everything is in memory and all events get re-played every time the API docker container is re-started. The source code can be found in ```./api```.
+
+{{% notice tip %}}
+Try  "```les-node --help```"
+{{% /notice %}}

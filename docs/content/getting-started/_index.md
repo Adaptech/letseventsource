@@ -22,7 +22,7 @@ make install
 
 ... or ... 
 
-[Instructions for Linux, Windows Mac & Docker](INSTALL.md)
+[Instructions for Linux, Windows Mac & Docker](https://github.com/Adaptech/les/blob/master/INSTALL.md)
 
 
 ### Hello World

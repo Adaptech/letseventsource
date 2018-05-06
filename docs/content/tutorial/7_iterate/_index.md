@@ -5,6 +5,8 @@ description = "Event storm. Build & explore API. Rinse. Repeat."
 draft= false
 +++
 
+{{% alert theme="info" %}}**Event storm. Build & explore API. Rinse. Repeat.**{{% /alert %}}
+
 ### Deleting the previous iteration, including data
 
 Delete the entire system with ...

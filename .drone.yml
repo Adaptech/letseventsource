@@ -6,7 +6,7 @@ pipeline:
   build:
     image: golang:latest
     commands:
-      - apt-get update && apt-get install hugo
+      - make install-hugo
       - cd docs && make all
 
 

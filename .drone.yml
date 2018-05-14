@@ -4,11 +4,8 @@ workspace:
 
 pipeline:
   build:
-    image: golang:latest
+    image: publysher/hugo:latest
     commands:
-      - go get github.com/magefile/mage
-      - go get -d github.com/gohugoio/hugo
-      - cd /go/src/github.com/gohugoio/hugo && mage vendor && mage install
       - cd /go/src/github.com/Adaptech/letseventsource/docs && make all
 
 

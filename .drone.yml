@@ -6,7 +6,7 @@ pipeline:
   prerequisites:
     image: golang:latest
     commands:
-      - apt-get install hugo
+      - apt-get update && apt-get install hugo
   build:
     image: golang:latest
     commands:

@@ -6,6 +6,6 @@ pipeline:
   build:
     image: golang:latest
     commands:
-      - make all
+      - cd docs && make all
 
 

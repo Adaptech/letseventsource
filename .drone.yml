@@ -3,13 +3,10 @@ workspace:
   path: src/github.com/Adaptech/letseventsource
 
 pipeline:
-  prerequisites:
-    image: golang:latest
-    commands:
-      - apt-get update && apt-get install hugo
   build:
     image: golang:latest
     commands:
+      - apt-get update && apt-get install hugo
       - cd docs && make all
 
 

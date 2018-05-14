@@ -8,7 +8,7 @@ pipeline:
     commands:
       - go get github.com/magefile/mage
       - go get -d github.com/gohugoio/hugo
-      - cd ./src/github.com/gohugoio/hugo && mage vendor && mage install
+      - cd /go/src/github.com/gohugoio/hugo && mage vendor && mage install
       - cd docs && make all
 
 

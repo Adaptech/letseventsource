@@ -6,6 +6,6 @@ pipeline:
   build:
     image: publysher/hugo:latest
     commands:
-      - cd /go/src/github.com/Adaptech/letseventsource/docs && make all
+      - cd /go/src/github.com/Adaptech/letseventsource/docs && make build-web
 
 

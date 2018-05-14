@@ -1,0 +1,11 @@
+workspace:
+  base: /go
+  path: src/github.com/Adaptech/letseventsource
+
+pipeline:
+  build:
+    image: golang:latest
+    commands:
+      - make all
+
+

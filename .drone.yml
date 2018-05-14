@@ -9,6 +9,6 @@ pipeline:
       - go get github.com/magefile/mage
       - go get -d github.com/gohugoio/hugo
       - cd /go/src/github.com/gohugoio/hugo && mage vendor && mage install
-      - cd docs && make all
+      - cd /go/src/github.com/Adaptech/letseventsource && make all
 
 

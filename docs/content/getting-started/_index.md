@@ -9,6 +9,7 @@ weight=100
 ### Prerequisites
 
 * [NodeJS 8.11.1 LTS](https://nodejs.org/en/) or better
+* Docker 18.03.1-ce or better
 * [docker-compose](https://docs.docker.com/compose/install/)
 
 ### Installation

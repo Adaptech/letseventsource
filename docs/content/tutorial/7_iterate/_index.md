@@ -52,11 +52,10 @@ TODO List* // todoId, description, dueDate, status
 
 ```
 
-{{% notice tip %}}
-**Verifying that an ID exists**
-
-Event Markdown has a convention: If a command refers to another event stream by ID (e.g. ```userId``` in ```Add Item```) it assumes that there is a read model with the name ```"<streamname> Lookup"```. (Example: ```"User Lookup* // userId, email"```). This is queried by the API controller to ensure that a given (e.g.) userId  command parameter refers to an existing user.
-{{% /notice %}}
+{{% panel theme="success" header="Event Markdown Convention: Looking up IDs in Read Models" %}}
+If a command refers to another event stream by ID (e.g. ```userId``` in ```Add Item```) it assumes that there is a read model with the name ```"<streamname> Lookup"```. 
+Example: ```"User Lookup* // userId, email"```. This is queried by the API controller to ensure that a given (e.g.) userId  command parameter refers to an existing user.
+{{% /panel %}}
 
 Validation now passes:
 

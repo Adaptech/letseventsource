@@ -1,160 +1,160 @@
 [
 {
-	"uri": "/getting-started/",
+	"uri": "/letseventsource/getting-started/",
 	"title": "Getting Started",
 	"tags": [],
 	"description": "Hello LES - Go directly from event storming to a functioning event sourced microservice.",
 	"content": " Prerequisites  NodeJS 8.11.1 LTS or better Docker 18.03.1-ce or better docker-compose  Installation Latest version from source:\ngit clone https://github.com/Adaptech/les.git make install \u0026hellip; or \u0026hellip;\nInstructions for Linux, Windows Mac \u0026amp; Docker\nHello World Step 1:\nCreate an Event Markdown file. Event Markdown (EMD) is a simple language used to describe an event storming:\n# TODO List Add Item -\u0026gt; // description, dueDate Todo Added // description, dueDate TODO List* // todoId, description, dueDate Save it to Eventstorming.emd.\nStep 2:\nles convert \u0026amp;\u0026amp; les-node -b \u0026amp;\u0026amp; cd api \u0026amp;\u0026amp; npm install \u0026amp;\u0026amp; docker-compose up -d --force-recreate Or using Docker:\ndocker run -v $(pwd):/les les convert \u0026amp;\u0026amp; docker run -v $(pwd):/les les-node -b \u0026amp;\u0026amp; cd api \u0026amp;\u0026amp; npm install \u0026amp;\u0026amp; docker-compose up -d (If you doing this in Linux and encounter \u0026ldquo;permission denied\u0026rdquo; errors, your USER or GROUP ID need to be specified. Say your USER ID is 1003, then add --user 1003 after each docker run in the above command.)\nStep 3:\nThere is no step 3.\n Add some items to the TODO list: http://localhost:3001/api-docs (Swagger/OpenAPI) View the items: http://localhost:3001/api/v1/r/TODOList Look at the \u0026ldquo;TodoAdded\u0026rdquo; events in the Eventstore DB: http://localhost:2113 (username \u0026lsquo;admin\u0026rsquo;, password \u0026lsquo;changeit\u0026rsquo;) Check out the source code for the \u0026ldquo;TODO List\u0026rdquo; system: ./api  What next \u0026hellip;  A collection of Event Markdown (EMD) examples: https://github.com/Adaptech/les/src/master/samples**\n Learn Event Storming: http://eventstorming.com\n Learn Event Markdown: https://webeventstorming.com\n EMD Cheat Sheet: https://github.com/Adaptech/letseventsource/raw/master/EMD-Cheatsheet-0.10.0-alpha-alpha.pdf\n https://gitter.im/Adaptech/les\n  IDE Integrations \u0026amp; Tools  Event Markdown vscode extension  "
 },
 {
-	"uri": "/faq/eventstorming/",
+	"uri": "/letseventsource/faq/eventstorming/",
 	"title": "What is Event Storming?",
 	"tags": [],
 	"description": "Event storming is a very nice collaborative way of understanding software requirements and relating them directly to what the business needs.",
 	"content": "Event storming is a very nice collaborative way of understanding software requirements and relating them directly to what the business needs. It was invented by Alberto Brandolini.\n"
 },
 {
-	"uri": "/tutorial/",
+	"uri": "/letseventsource/tutorial/",
 	"title": "Tutorial",
 	"tags": [],
 	"description": "Tutorial - Prototyping Event Sourced Microservices with LES",
 	"content": " Prototyping Event Sourced Microservices with LES This tutorial shows how to use the les and les-node tools to build a NodeJS based event sourced microservice straight from an event storming. les and les-node are part of the LESTER stack (\u0026ldquo;Let\u0026rsquo;s Event Source Together\u0026rdquo;). LESTER takes a specification for an event sourced system and produces deployment-ready commands, events, documentation and infrastructure. It is designed to make prototyping and starting implementation of an event based system simple and keep development efforts closely aligned with business objectives and requirements.\n 1. Do an Event Storming Event storming is a communications tool. It shows a path through a system, as events on a timeline.   2. Turn it into Event Markdown (EMD) Event Markdown (EMD) is a simple language used to capture the results of an event storming.\n  3. Turn the Event Markdown \u0026#34;Green\u0026#34; \u0026#34;Green\u0026#34; EMD is event markdown which follows some simple conventions and has enough information to use it to generate a working event sourced CQRS API from it.\n  4. Convert EMD to EML Event Markup Language (EML) is a YAML schema which describes the structure of a CQRS/ES system.\n  5. Build and deploy the API Build a CQRS/ES system in NodeJS and deploy it with docker-compose.\n  6. Try the API Explore the newly generated API using CURL and Swagger\n  7. Iterate Event storm. Build \u0026amp; explore API. Rinse. Repeat.\n  8. Customize Event Markup Edit Event Markup to customize the system and use functionality not available from EMD.\n  "
 },
 {
-	"uri": "/faq/eventmarkdown/",
+	"uri": "/letseventsource/faq/eventmarkdown/",
 	"title": "What is Event Markdown (EMD)?",
 	"tags": [],
 	"description": "EMD is a simple convention-based textual representation of an Event Storming.",
 	"content": "EMD is a simple convention-based textual representation of an Event Storming. It attempts to retains the key characteristics which make sticky-on-a-wall, group-of-people event storming so successful, such as deliberate fuzziness. You can try it out at https://webeventstorming.com. https://youtu.be/1Pb4a8lr74E has a 30 second intro.\nEMD Cheat Sheet\n"
 },
 {
-	"uri": "/faq/",
+	"uri": "/letseventsource/faq/",
 	"title": "Frequently Asked Questions",
 	"tags": [],
 	"description": "",
 	"content": "  What is Event Storming? Event storming is a very nice collaborative way of understanding software requirements and relating them directly to what the business needs.\n  What is Event Markdown (EMD)? EMD is a simple convention-based textual representation of an Event Storming.\n  What is “Green” Event Markdown? “Green” EMD is Event Markdown which contains sufficient information for automatically generating an Event Markup Language (EML) specification for an event sourced system.\n  What is an event sourced system? An event sourced system consists of one or more state machines, the commands which change their state, events which record the state changes, and read models which can build documents (screens, reports, lookup tables, …) with data from these events.\n  What is Event Markup Language (EML)? Event Markup Language is a YAML schema for specifying event sourced systems. It is the input for the “les” command line tool which is able to validate whether the specification would result in a “complete” event sourced system.\n  What do you mean by \u0026#34;complete\u0026#34; event sourced system? A \u0026#34;complete\u0026#34; CQRS/ES system is transactionally consistent, cohesive and loosely coupled.\n  What are \u0026#34;les\u0026#34;, \u0026#34;les-node\u0026#34;, \u0026#34;les-viz\u0026#34; and \u0026#34;compliance-test\u0026#34;? The LESTER stack command line tools.\n  What use is this? I\u0026#39;m stuck in legacy code. How to benefit from CQRS and event sourcing when surrounded by legacy code.\n  "
 },
 {
-	"uri": "/faq/greeneventmarkdown/",
+	"uri": "/letseventsource/faq/greeneventmarkdown/",
 	"title": "What is “Green” Event Markdown?",
 	"tags": [],
 	"description": "“Green” EMD is Event Markdown which contains sufficient information for automatically generating an Event Markup Language (EML) specification for an event sourced system.",
 	"content": "“Green” EMD is Event Markdown which contains sufficient information for automatically generating an Event Markup Language (EML) specification for an event sourced system.\n"
 },
 {
-	"uri": "/faq/eventsourcedsystem/",
+	"uri": "/letseventsource/faq/eventsourcedsystem/",
 	"title": "What is an event sourced system?",
 	"tags": [],
 	"description": "An event sourced system consists of one or more state machines, the commands which change their state, events which record the state changes, and read models which can build documents (screens, reports, lookup tables, …) with data from these events.",
 	"content": "An event sourced system consists of one or more state machines, the commands which change their state, events which record the state changes, and read models which can build documents (screens, reports, lookup tables, …) with data from these events.\n"
 },
 {
-	"uri": "/faq/eventmarkuplanguage/",
+	"uri": "/letseventsource/faq/eventmarkuplanguage/",
 	"title": "What is Event Markup Language (EML)?",
 	"tags": [],
 	"description": "Event Markup Language is a YAML schema for specifying event sourced systems. It is the input for the “les” command line tool which is able to validate whether the specification would result in a “complete” event sourced system.",
 	"content": "Event Markup Language is a YAML schema for specifying event sourced systems. It is the input for the les command line tool which is able to validate whether the specification would result in a “complete” event sourced system.\n"
 },
 {
-	"uri": "/faq/complete-es-system/",
+	"uri": "/letseventsource/faq/complete-es-system/",
 	"title": "What do you mean by &#34;complete&#34; event sourced system?",
 	"tags": [],
 	"description": "A &#34;complete&#34; CQRS/ES system is transactionally consistent, cohesive and loosely coupled.",
 	"content": "A “complete” event sourced system \u0026hellip;\n Records changes to the state of a state machine as a stream of events over time. Can re-build the current state of a state machine from recorded events. Is transactionally consistent: The current state of a state machine (a.k.a. transaction, event stream, or if DDD is your thing, aggregate) contains all the data needed to make decisions on what the next state should be when commands are processed. Commands succeed or fail atomically. Commands result in state changes. Commands must contain a reference to the state machine whose state they change. State changes are recorded as time stamped events stated in past tense. Events must contain a reference to the state machine whose state changes they record. Read models must not contain any data which they cannot get from subscribing to events. Commands cannot act on state machines which do not exist. Unless executing the command results in creation of a new state machine. Command parameters cannot reference ids of state machine instances which do not exist.  "
 },
 {
-	"uri": "/faq/cmdline-tools/",
+	"uri": "/letseventsource/faq/cmdline-tools/",
 	"title": "What are &#34;les&#34;, &#34;les-node&#34;, &#34;les-viz&#34; and &#34;compliance-test&#34;?",
 	"tags": [],
 	"description": "The LESTER stack command line tools.",
 	"content": " LESTER Command Line Tools See also: https://github.com/Adaptech/les/tree/master/cmd\nles  les validates EMD/EML for completeness and converts event stormings (described in Event Markdown) to Event Markup (EML) suitable for generating CQRS/ES systems.  Think of les as an architect-in-a-box.\nles-node les-node builds an event sourced NodeJS API from EML.\nles-viz Generates a GraphViz digraph for an event storming which can be turned into a (e.g.) .png file:\nSee https://github.com/Adaptech/les/tree/master/cmd/les-viz\nWhat is the \u0026ldquo;compliance-test\u0026rdquo; utility? compliance-test is a tool for developers who wish to contribute to les-node or build their own Event Markup -\u0026gt; code builders. It tests whether a HTTP API built from a reference EML specification is a complete \u0026ldquo;error-free\u0026rdquo; event sourced system. (a.k.a. “les compliant”). It assumes that certain conventions were followed for routes and API endpoint names. It is implementation language agnostic.\nWhat do les-redux, les-csharp, les-shellscript, les-haskell, les-whitespace and les-akka have in common? They are not in existence. The only languages for which EML-\u0026gt;API builders have been created at this point are EML-\u0026gt;NodeJS, EML-\u0026gt;Swagger/OpenAPI (as a Golang package for use by other tools) and a EML-\u0026gt;Golang pre-alpha version.\nWhat is les-I-can’t-stand-code-other-than-my-own? Event Markup Language is your hedge against the framework trap (a.k.a. “straight jacket, implemented as mystery code”). It is deliberately implementation- and language-agnostic. eml-node demonstrates how to turn EML into a working CQRS/ES system with an API and a Swagger API playground. If you prefer (or need) to implement your own version, go ahead.\n"
 },
 {
-	"uri": "/faq/what-about-legacy-code/",
+	"uri": "/letseventsource/faq/what-about-legacy-code/",
 	"title": "What use is this? I&#39;m stuck in legacy code.",
 	"tags": [],
 	"description": "How to benefit from CQRS and event sourcing when surrounded by legacy code.",
 	"content": "There\u0026rsquo;s a white paper for that.\nThe LESTER stack has been used to prototype legacy integrations which make the old system \u0026ldquo;talk\u0026rdquo; about itself. It does that by publishing business events which new \u0026ldquo;microservices\u0026rdquo; can subscribe to. If a two-way integration is needed the legacy can subscribe to business events from the new systems. This can lead to establishing the legacy as its own bounded context which integrates with other systems via pub-sub and domain events and establishes options for it\u0026rsquo;s eventual replacement.\nSuch replacement, complete or partial, is invariably messy, with a lot of trade-offs to be made. Most of them are business decisions rather than technical considerations. Domain Driven Design helps a lot with establishing criteria for making these because it helps with understanding where one spaghetti ends and the next one begins.\nEric Evans\u0026rsquo;s four strategies for dealing with legacy systems are a great inspiration for how to write good code in that kind of environment.\nThis talk shows examples on how they might be applied.\n"
 },
 {
-	"uri": "/tutorial/1_eventstorming/",
+	"uri": "/letseventsource/tutorial/1_eventstorming/",
 	"title": "1. Do an Event Storming",
 	"tags": [],
 	"description": "Event storming is a communications tool. It shows a path through a system, as events on a timeline. ",
 	"content": "Event storming is a communications tool. It shows a path through a system, as events on a timeline. Compared to writing specifications using traditional use case analysis, event storming is \u0026hellip;\n More useful Less time consuming More fun Less tedious  Event storming lessons we learned: A nice diverse group of people consisting of leadership/management, developers \u0026amp; IT, UX \u0026amp; product folks, etc. works best. Avoid event storming remotely if at all possible. Nothing beats a wall with sticky notes with people in front of it talking to each other. It\u0026rsquo;s human, it\u0026rsquo;s storytelling, it\u0026rsquo;s tactile. It\u0026rsquo;s what you want. Trying to event storm with only technicians in the room misses the point - event storming is a tool to make sure everybody with a stake in the outcome shares an understanding of what the system does.\n"
 },
 {
-	"uri": "/tutorial/2_eventmarkdown/",
+	"uri": "/letseventsource/tutorial/2_eventmarkdown/",
 	"title": "2. Turn it into Event Markdown (EMD)",
 	"tags": [],
 	"description": "Event Markdown (EMD) is a simple language used to capture the results of an event storming.",
 	"content": "Event Markdown (EMD) is a simple language used to capture the results of an event storming. Event Markdown (EMD):\nAdd Item -\u0026gt; Todo Added // description, dueDate Set Status -\u0026gt; Todo Status Changed TODO List* // description, dueDate Comments # This is a comment.\n  Commands  This is a command:  Do Something -\u0026gt;\n Commands can have parameters:  Add Item -\u0026gt; // description, dueDate\n  Events  And this is what events look like:  Something Happened\n With properties:  Todo Added // description, dueDate\n  Documents  Documents (also known as a read models):  TODO List*\n Or, with properties:  TODO List* // todoId, description, dueDate, status\n  Enter EMD at https://webeventstorming.com to see it as a graph:\n"
 },
 {
-	"uri": "/tutorial/3_greenmarkdown/",
+	"uri": "/letseventsource/tutorial/3_greenmarkdown/",
 	"title": "3. Turn the Event Markdown &#34;Green&#34;",
 	"tags": [],
 	"description": "&#34;Green&#34; EMD is event markdown which follows some simple conventions and has enough information to use it to generate a working event sourced CQRS API from it.",
 	"content": "\u0026ldquo;Green\u0026rdquo; EMD is event markdown which follows some simple conventions and has enough information to use it to generate an event sourced microservice API from it. To validate an EMD file for greenness, see les validate --help.\nSave this to a file called Eventstorming.emd:\n# TODO List Add Item -\u0026gt; // description, dueDate Todo Added // description, dueDate Set Status -\u0026gt; // status Todo Status Changed // status TODO List* // todoId, description, dueDate, status Compared to the previous EMD for the TODO List event storming, the new version has additional properties and other information needed to create a CQRS/ES system.\n\u0026ldquo;Green\u0026rdquo; EMD Cheat Sheet .pdf\n"
 },
 {
-	"uri": "/tutorial/4_emdtoeml/",
+	"uri": "/letseventsource/tutorial/4_emdtoeml/",
 	"title": "4. Convert EMD to EML",
 	"tags": [],
 	"description": "Event Markup Language (EML) is a YAML schema which describes the structure of a CQRS/ES system.",
 	"content": "Event Markup Language describes the structure of a CQRS/ES system. Run the following command:\nles convert Event Markup Language is a YAML schema for describing event sourced systems which make use of the CQRS (\u0026ldquo;Command Query Responsibility Segregation\u0026rdquo;) pattern. EML makes such designs accessible to tools like les validate which act as a kind of \u0026ldquo;architect in a box\u0026rdquo;.\nThis makes it possible to automatically validate whether implementing the design is likely to result in a good event sourced system:\n Will it have transactional integrity? Does it have all the necessary events and event properties to make it possible to determine the current state of aggregates/streams/state machines by re-playing them from the event store? Do the events have all the necessary information for building the read models? Have certain business rules been considered when modeling the domain? For example, is it possible to send an invoice after it\u0026rsquo;s been deleted? (It probably shouldn\u0026rsquo;t be.)  EML is implementation language agnostic. It doesn\u0026rsquo;t matter what stack the CQRS/ES system will be written in. At the moment there is a builder for EML -\u0026gt; NodeJS (les-node). There\u0026rsquo;s also EML -\u0026gt; Swagger spec to give developers a nice UI to play with the system\u0026rsquo;s API. A EML -\u0026gt; Golang implementation is in early alpha.\nTry \u0026ldquo;les --help\u0026ldquo;\n "
 },
 {
-	"uri": "/tutorial/5_buildanddeploy/",
+	"uri": "/letseventsource/tutorial/5_buildanddeploy/",
 	"title": "5. Build and deploy the API",
 	"tags": [],
 	"description": "Build a CQRS/ES system in NodeJS and deploy it with docker-compose.",
 	"content": "The les-node command line tool generates a complete NodeJS CQRS/ES system from Event Markup Language (EML). Run the following:\nles-node -b Eventsourcing.eml.yaml \\ \u0026amp;\u0026amp; cd api \\ \u0026amp;\u0026amp; npm install \\ \u0026amp;\u0026amp; docker-compose up -d \\ \u0026amp;\u0026amp; docker-compose restart api This implements the TODO list API in NodeJS, with in-memory read models and https://eventstore.org as event log.\nIt is possible to configure the system to use Postgres or LevelDB for read model storage, but the generated docker-compose.yml contains a dev enviroment setup where everything is in memory and all events get re-played every time the API docker container is re-started. The source code can be found in ./api.\nTry \u0026ldquo;les-node --help\u0026ldquo;\n "
 },
 {
-	"uri": "/tutorial/6_trytheapi/",
+	"uri": "/letseventsource/tutorial/6_trytheapi/",
 	"title": "6. Try the API",
 	"tags": [],
 	"description": "Explore the newly generated API using CURL and Swagger",
 	"content": "The NodeJS system built by les-node includes a Swagger API playground. The Swagger UI is at http://localhost:3001/api-docs.\nLet\u0026rsquo;s use the API:\n Create a backlog of tasks:  curl -X POST \u0026#34;http://localhost:3001/api/v1/Todo/AddItem\u0026#34; -H \u0026#34;accept: */*\u0026#34; -H \u0026#34;Content-Type: application/json\u0026#34; -d \u0026#34;{\\\u0026#34;description\\\u0026#34;:\\\u0026#34;Change lightbulb\\\u0026#34;,\\\u0026#34;dueDate\\\u0026#34;:\\\u0026#34;2018-04-20\\\u0026#34;,\\\u0026#34;todoId\\\u0026#34;:\\\u0026#34;aa152e0c138942a599ba0f2f84541f4e\\\u0026#34;}\u0026#34; curl -X POST \u0026#34;http://localhost:3001/api/v1/Todo/AddItem\u0026#34; -H \u0026#34;accept: */*\u0026#34; -H \u0026#34;Content-Type: application/json\u0026#34; -d \u0026#34;{\\\u0026#34;description\\\u0026#34;:\\\u0026#34;Repair faucet\\\u0026#34;,\\\u0026#34;dueDate\\\u0026#34;:\\\u0026#34;2018-04-22\\\u0026#34;,\\\u0026#34;todoId\\\u0026#34;:\\\u0026#34;bb152e0c138942a599ba0f2f84541f4e\\\u0026#34;}\u0026#34; curl -X POST \u0026#34;http://localhost:3001/api/v1/Todo/AddItem\u0026#34; -H \u0026#34;accept: */*\u0026#34; -H \u0026#34;Content-Type: application/json\u0026#34; -d \u0026#34;{\\\u0026#34;description\\\u0026#34;:\\\u0026#34;Paint hallway\\\u0026#34;,\\\u0026#34;dueDate\\\u0026#34;:\\\u0026#34;2018-04-23\\\u0026#34;,\\\u0026#34;todoId\\\u0026#34;:\\\u0026#34;cc152e0c138942a599ba0f2f84541f4e\\\u0026#34;}\u0026#34;  Look at the backlog:  curl http://localhost:3001/api/v1/r/TODOList```  Pull some items from the backlog into TODO:  curl -X POST \u0026#34;http://localhost:3001/api/v1/Todo/SetStatus\u0026#34; -H \u0026#34;accept: */*\u0026#34; -H \u0026#34;Content-Type: application/json\u0026#34; -d \u0026#34;{\\\u0026#34;status\\\u0026#34;:\\\u0026#34;todo\\\u0026#34;,\\\u0026#34;todoId\\\u0026#34;:\\\u0026#34;aa152e0c138942a599ba0f2f84541f4e\\\u0026#34;}\u0026#34; curl -X POST \u0026#34;http://localhost:3001/api/v1/Todo/SetStatus\u0026#34; -H \u0026#34;accept: */*\u0026#34; -H \u0026#34;Content-Type: application/json\u0026#34; -d \u0026#34;{\\\u0026#34;status\\\u0026#34;:\\\u0026#34;todo\\\u0026#34;,\\\u0026#34;todoId\\\u0026#34;:\\\u0026#34;bb152e0c138942a599ba0f2f84541f4e\\\u0026#34;}\u0026#34; curl -X POST \u0026#34;http://localhost:3001/api/v1/Todo/SetStatus\u0026#34; -H \u0026#34;accept: */*\u0026#34; -H \u0026#34;Content-Type: application/json\u0026#34; -d \u0026#34;{\\\u0026#34;status\\\u0026#34;:\\\u0026#34;todo\\\u0026#34;,\\\u0026#34;todoId\\\u0026#34;:\\\u0026#34;cc152e0c138942a599ba0f2f84541f4e\\\u0026#34;}\u0026#34;  Start some work and complete some work:  curl -X POST \u0026#34;http://localhost:3001/api/v1/Todo/SetStatus\u0026#34; -H \u0026#34;accept: */*\u0026#34; -H \u0026#34;Content-Type: application/json\u0026#34; -d \u0026#34;{\\\u0026#34;status\\\u0026#34;:\\\u0026#34;doing\\\u0026#34;,\\\u0026#34;todoId\\\u0026#34;:\\\u0026#34;aa152e0c138942a599ba0f2f84541f4e\\\u0026#34;}\u0026#34; curl -X POST \u0026#34;http://localhost:3001/api/v1/Todo/SetStatus\u0026#34; -H \u0026#34;accept: */*\u0026#34; -H \u0026#34;Content-Type: application/json\u0026#34; -d \u0026#34;{\\\u0026#34;status\\\u0026#34;:\\\u0026#34;done\\\u0026#34;,\\\u0026#34;todoId\\\u0026#34;:\\\u0026#34;bb152e0c138942a599ba0f2f84541f4e\\\u0026#34;}\u0026#34; Here\u0026rsquo;s the result:\nTry adding and completing some more items at http://localhost:3001/api-docs.\nTo look some of the events which were stored to the event log and published when commands were POSTed, go to http://localhost:2113 (username \u0026lsquo;admin\u0026rsquo;, password \u0026lsquo;changeit\u0026rsquo;)\n"
 },
 {
-	"uri": "/tutorial/7_iterate/",
+	"uri": "/letseventsource/tutorial/7_iterate/",
 	"title": "7. Iterate",
 	"tags": [],
 	"description": "Event storm. Build &amp; explore API. Rinse. Repeat.",
 	"content": " Event storm. Build \u0026amp; explore API. Rinse. Repeat. Deleting the previous iteration, including data Delete the entire system with \u0026hellip;\ncd api docker-compose down Retaining data from the previous iteration To retain the event store data, delete just the API docker container but leave the eventstore running:\ncd api docker-compose stop api \u0026amp;\u0026amp; docker-compose rm -f Edit the EMD (or EML) les validate -f runs continuously, re-validating the EMD/EML each time Eventstorming.emd is saved:\nThis version makes sure that the \u0026ldquo;Add Item\u0026rdquo; userId parameter actually belongs to a registered user. But there is a validation error - for that to be possible, a read model must exist where users can be looked up by userId when somebody POSTs to /api/v1/Todo/AddItem. Let\u0026rsquo;s add one:\n# TODO List Register User -\u0026gt; // userId, email User Registered // userId, email User Lookup* // userId, email Add Item -\u0026gt; // description, dueDate, userId Todo Added // description, dueDate, userId Set Status -\u0026gt; // status Todo Status Changed // status TODO List* // todoId, description, dueDate, status Event Markdown Convention: Looking up IDs in Read Models If a command refers to another event stream by ID (e.g. userId in Add Item) it assumes that there is a read model with the name \u0026quot;\u0026lt;streamname\u0026gt; Lookup\u0026quot;. Example: \u0026quot;User Lookup* // userId, email\u0026quot;. This is queried by the API controller to ensure that a given (e.g.) userId command parameter refers to an existing user.\n  Validation now passes:\nRebuild and deploy les convert todolist.emd \u0026amp;\u0026amp; \\ les-node -b Eventsourcing.eml.yaml \u0026amp;\u0026amp; \\ cd api \u0026amp;\u0026amp; \\ npm install \u0026amp;\u0026amp; \\ docker-compose up -d \u0026amp;\u0026amp; \\ docker-compose restart api # The restart is a workaround for a race condition when starting containers. :-( Try it:\ncurl -X POST \u0026#34;http://localhost:3001/api/v1/Todo/AddItem\u0026#34; -H \u0026#34;accept: */*\u0026#34; -H \u0026#34;Content-Type: application/json\u0026#34; -d \u0026#34;{\\\u0026#34;description\\\u0026#34;:\\\u0026#34;Serpentlake\\\u0026#34;,\\\u0026#34;dueDate\\\u0026#34;:\\\u0026#34;Tuesday 3 May 2018\\\u0026#34;,\\\u0026#34;todoId\\\u0026#34;:\\\u0026#34;241dfb5c5e3243ea802e62a4ef000a5a\\\u0026#34;,\\\u0026#34;userId\\\u0026#34;:\\\u0026#34;48b0ef227d204fdc971def3deeb9ef4e\\\u0026#34;}\u0026#34; \u0026hellip; results in:\n{\u0026quot;message\u0026quot;:[{\u0026quot;field\u0026quot;:\u0026quot;userId\u0026quot;,\u0026quot;msg\u0026quot;:\u0026quot;userId does not exist.\u0026quot;}]}\nTherefore, register the user:\ncurl -X POST \u0026#34;http://localhost:3001/api/v1/User/RegisterUser\u0026#34; -H \u0026#34;accept: */*\u0026#34; -H \u0026#34;Content-Type: application/json\u0026#34; -d \u0026#34;{\\\u0026#34;email\\\u0026#34;:\\\u0026#34;natalieharris066@test.com\\\u0026#34;,\\\u0026#34;userId\\\u0026#34;:\\\u0026#34;48b0ef227d204fdc971def3deeb9ef4e\\\u0026#34;}\u0026#34; \u0026hellip; and try adding a TODO item for that userId again:\ncurl -X POST \u0026#34;http://localhost:3001/api/v1/Todo/AddItem\u0026#34; -H \u0026#34;accept: */*\u0026#34; -H \u0026#34;Content-Type: application/json\u0026#34; -d \u0026#34;{\\\u0026#34;description\\\u0026#34;:\\\u0026#34;Serpentlake\\\u0026#34;,\\\u0026#34;dueDate\\\u0026#34;:\\\u0026#34;Tuesday 3 May 2018\\\u0026#34;,\\\u0026#34;todoId\\\u0026#34;:\\\u0026#34;241dfb5c5e3243ea802e62a4ef000a5a\\\u0026#34;,\\\u0026#34;userId\\\u0026#34;:\\\u0026#34;48b0ef227d204fdc971def3deeb9ef4e\\\u0026#34;}\u0026#34; The item can now be found in the TODO list read model:\ncurl -X GET \u0026#34;http://localhost:3001/api/v1/r/TODOList\u0026#34; -H \u0026#34;accept: */*\u0026#34; returns \u0026hellip;\n[{\u0026#34;todoId\u0026#34;:\u0026#34;241dfb5c5e3243ea802e62a4ef000a5a\u0026#34;,\u0026#34;description\u0026#34;:\u0026#34;Serpentlake\u0026#34;,\u0026#34;dueDate\u0026#34;:\u0026#34;Tuesday 3 May 2018\u0026#34;,\u0026#34;status\u0026#34;:\u0026#34;\u0026#34;,\u0026#34;userId\u0026#34;:\u0026#34;48b0ef227d204fdc971def3deeb9ef4e\u0026#34;}] \u0026hellip; because now a user with userId 48b0ef227d204fdc971def3deeb9ef4e exists:\ncurl -X GET \u0026#34;http://localhost:3001/api/v1/r/UserLookup\u0026#34; -H \u0026#34;accept: */*\u0026#34; returns \u0026hellip;\n[{\u0026#34;userId\u0026#34;:\u0026#34;48b0ef227d204fdc971def3deeb9ef4e\u0026#34;,\u0026#34;email\u0026#34;:\u0026#34;natalieharris066@test.com\u0026#34;}]"
 },
 {
-	"uri": "/tutorial/8_customeml/",
+	"uri": "/letseventsource/tutorial/8_customeml/",
 	"title": "8. Customize Event Markup",
 	"tags": [],
 	"description": "Edit Event Markup to customize the system and use functionality not available from EMD.",
 	"content": "Edit Event Markup to customize the system and use functionality not available from EMD. When deriving a CQRS/ES systems from Event Markdown, les convert makes a number of default assumptions about what the resulting system specified in the Event Markup YAML file should look like and what functionality it should have. In cases where there are additional requirements EML can be augmented and customized.\nEvent Markdown language is intentionally simple enough so it takes no more than 10 minutes to learn. In addition, it tries to mirror a very important event storming concept known as \u0026ldquo;deliberate fuzziness\u0026rdquo; - avoid getting side tracked into too much detail. Instead, focus on the big picture and on getting a shared understanding of the problem space.\nThat information can be augmented or edited in Event Markdown Language (EML).\nSave an Eventstorming.eml.yaml file to an empty directory:\nSolution: User Registration Contexts: - Name: User Registration Streams: - Stream: User Commands: - Command: Name: RegisterUser Parameters: - Name: userId Type: string Rules: - IsRequired - Name: email Type: string Rules: - IsRequired Postconditions: - UserRegistered - Command: Name: MarkAsAuthenticated Parameters: - Name: userId Type: string Rules: - IsRequired Preconditions: - UserRegistered MustHaveHappened - UserDeleted MustNotHaveHappened Postconditions: - UserAuthenticated - Command: Name: DeleteUser Parameters: - Name: userId Type: string Rules: - IsRequired Preconditions: - UserRegistered MustHaveHappened Postconditions: - UserDeleted Events: - Event: Name: UserRegistered Properties: - Name: \u0026#34;email\u0026#34; Type: string IsHashed: false - Name: \u0026#34;userId\u0026#34; Type: string IsHashed: false - Event: Name: UserAuthenticated Properties: - Name: \u0026#34;userId\u0026#34; Type: string IsHashed: false - Event: Name: UserDeleted Properties: - Name: \u0026#34;userId\u0026#34; Type: string IsHashed: false Readmodels: [] The EML file contains some additional functionality:\nThis is an example of preconditions which must be met for a command being able to execute: In order to be able to mark a user as authenticated (e.g.) after the user has been logged in by a system external authentication mechanism, the user cannot have been deleted and the user must have registered.\nBuild the API\u0026hellip;\nles convert \u0026amp;\u0026amp; les-node -b Start it\u0026hellip;\ncd api \u0026amp;\u0026amp; npm install \u0026amp;\u0026amp; docker-compose up -d \u0026hellip; and try it out at http://localhost:3001/api-docs.\nSo that\u0026rsquo;s it for the tutorial. LESTER is currently quite alpha, with many missing features. The design goal for EMD/EML is to eventually be full featured enough to enable users to build a simple CRUD systems with validation rules, etc. end-to-end without needing going into the generated code itself. In Real World scenarios, LESTER is currently mostly used as a one-way street - iterate in EMD and EML until there is need to customize the NodeJS code itself, then proceed in Node only. This has turned out to be very useful for getting started with projects. Where we tried it it has saved considerable development time. In addition, the process of event storming and iterating has helped a lot with understanding requirements.\n  "
 },
 {
-	"uri": "/_footer/",
+	"uri": "/letseventsource/_footer/",
 	"title": "_Footer",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "/",
+	"uri": "/letseventsource/",
 	"title": "Let&#39;s Event Source - Documentation",
 	"tags": [],
 	"description": "",
 	"content": " Event Sourced Systems Made Simple Event sourcing and CQRS/ES based \u0026ldquo;microservices\u0026rdquo; are increasingly seen as a nice way to build cohesive, loosely coupled systems with good transactional integrity. There is a knack to building software that way, so although the resulting systems tend to be much simpler and easier to understand than traditional (e.g.) object oriented implementations, there is a bit of a learning curve.\nLES attempts to address this in three ways:\n Fast microservice prototyping: Go directly from an event storming to a working event sourced API.\n \u0026ldquo;Architect in a box\u0026rdquo;: les validate assesses whether a prototype will result in a \u0026ldquo;good\u0026rdquo; event sourced microservice - cohesive, loosely-coupled, transactionally consistent. Then les-node -b builds a deployment-ready NodeJS API with plenty of guide fences and best practices in place as developers go forward customizing it. If you have your own coding standards or don\u0026rsquo;t like NodeJS, implement your own in a language of your choice.\n \u0026ldquo;Citizen IT Developer\u0026rdquo;. One of the goals of the LES project is to enable \u0026ldquo;business coders\u0026rdquo;, \u0026ldquo;power users\u0026rdquo; and entrepreneurs with little technical knowledge to build highly scalable event sourced microservices from scratch, basically \u0026ldquo;I\u0026rsquo;ve made this API for my startup - could you build me an app for that?\u0026rdquo;\n  LES is currently in alpha. We have started using 1. and 2. in Real Life projects. But no.3 (Citizen IT Developer) especially is still quite experimental, with a good number of features missing.\nLESTER takes an event storming and turns it directly into deployment-ready commands, events, documentation and infrastructure. It makes prototyping and implementation of an event based system simple and keeps it closely aligned with business objectives and requirements. Its goal is to remove many of the hurdles associated with adopting CQRS/ES.\nThe LESTER tooling is currently in alpha, but has been used for Real Life projects.\nIn:  Event Markdown (EMD) is a machine- and remote collaboration friendly way of capturing the results of an event storming. It attempts to distract as little as possible from what makes the stickies \u0026amp; paper-on-the-wall version so successful and to augment it: Easy to do. Brings business and technical people together. Fun. Deliberately fuzzy to discourage getting lost in detail not (yet) needed.\n Event Markup Language (EML) is a simple implementation-agnostic YAML DSL for describing event sourced systems, custom business rules and read models.\n  Out:  Fully functional, scalable and maintainable CQRS/ES system. API, with Swagger API playground. Language-agnostic. The reference implementation builds systems in NodeJS. An experimental Golang version exists. There is a prototype for turning an event markup language spec into a serverless implementation on Azure. Currently supported event store: https://eventstore.org. Read model storage in Postgres, LevelDB, Cassandra or in memory.  "
 },
 {
-	"uri": "/categories/",
+	"uri": "/letseventsource/categories/",
 	"title": "Categories",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "/tags/",
+	"uri": "/letseventsource/tags/",
 	"title": "Tags",
 	"tags": [],
 	"description": "",

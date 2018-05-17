@@ -1,4 +1,5 @@
-baseURL = "/letseventsource/"
+# baseURL = "https://adaptech.github.io/letseventsource/"
+baseURL = "/"
 
 languageCode = "en-us"
 DefaultContentLanguage = "en"
@@ -9,6 +10,7 @@ pygmentsCodeFences = true
 pygmentsStyle = "monokailight"
 
 publishDir = "docs"
+relativeURLs = true
 
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir= false

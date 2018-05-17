@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>/getting-started/</loc>
+    <lastmod>2018-04-27T08:48:27-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/faq/eventstorming/</loc>
+    <lastmod>2018-04-26T06:43:00-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tutorial/</loc>
+    <lastmod>2018-04-26T11:24:09-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/faq/eventmarkdown/</loc>
+    <lastmod>2018-04-26T06:43:00-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/faq/</loc>
+    <lastmod>2018-04-26T06:43:00-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/faq/greeneventmarkdown/</loc>
+    <lastmod>2018-04-26T06:43:00-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/faq/eventsourcedsystem/</loc>
+    <lastmod>2018-04-26T06:43:00-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/faq/eventmarkuplanguage/</loc>
+    <lastmod>2018-04-26T06:43:00-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/faq/complete-es-system/</loc>
+    <lastmod>2018-04-26T06:43:00-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/faq/cmdline-tools/</loc>
+    <lastmod>2018-04-26T06:43:00-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/faq/what-about-legacy-code/</loc>
+    <lastmod>2018-04-26T06:43:00-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tutorial/1_eventstorming/</loc>
+    <lastmod>2018-05-02T10:29:57-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tutorial/2_eventmarkdown/</loc>
+    <lastmod>2018-05-02T10:29:57-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tutorial/3_greenmarkdown/</loc>
+    <lastmod>2018-05-02T10:29:57-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tutorial/4_emdtoeml/</loc>
+    <lastmod>2018-05-02T10:29:57-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tutorial/5_buildanddeploy/</loc>
+    <lastmod>2018-05-02T10:29:57-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tutorial/6_trytheapi/</loc>
+    <lastmod>2018-05-02T10:29:57-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tutorial/7_iterate/</loc>
+    <lastmod>2018-05-02T10:29:57-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tutorial/8_customeml/</loc>
+    <lastmod>2018-05-02T10:29:57-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/_footer/</loc>
+    <lastmod>2018-04-26T08:08:51-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2018-04-26T06:35:30-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

@@ -95,7 +95,7 @@ This is an example of preconditions which must be met for a command being able t
 
 ```bash
 
-les convert && les-node -b
+les-node -b
 
 ```
 

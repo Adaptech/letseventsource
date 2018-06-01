@@ -128,7 +128,8 @@ article > aside {
           justify-content: center;
           order: 1;
           width: 20px;
-          cursor: pointer; }
+          cursor: pointer;
+          border-right:0; }
         article > aside .menu .dd-item div a {
           display: flex;
           flex: 1;
@@ -289,11 +290,15 @@ article section.page {
     color: #060606;
     font-weight: 200;
     font-size: 3.25rem;
-    line-height: 2.7rem; }
+    line-height: 2.95rem; }
   article section.page h1 {
-    margin-top: 4rem; }
+    margin-top: 4rem;
+    line-height: 3.7rem; }
   article section.page h2 {
-    margin-top: 3rem; }
+    margin-top: 3rem;
+    line-height: 2.7rem; }
+  article section.page h3 {
+    line-height: initial; }
   article section.page table {
     width: 100%;
     margin-bottom: 2em;
